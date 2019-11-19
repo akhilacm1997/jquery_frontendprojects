@@ -1,0 +1,28 @@
+<html>
+    <title>consolelog</title>
+
+    <head>
+
+    </head>
+    <body>
+        <input id="width" type="text" placeholder="width">
+        <input id="height" type="text" placeholder="height">
+        <script>
+            var name ="akhila";
+            var cars = ["Saab", "Volvo", "BMW"];
+            console.log(name);
+            console.warn(name+": warning");
+            console.error(name+": shows error");
+            var width=6;
+            var bredth=10;
+            var area=width*bredth;
+            console.group('Area calculations');            
+                console.info('Width ', width);              
+                console.info('Height ',bredth );            
+                console.log(area);                          
+            console.groupEnd();
+            console.table(cars); 
+           
+            </script>
+    </body>
+</html>

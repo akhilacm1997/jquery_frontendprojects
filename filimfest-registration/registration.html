@@ -1,0 +1,327 @@
+<html>
+    <head>
+        <title>filmfest-registration</title>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+        <style>
+
+            body{
+                background-color: burlywood;
+            }
+            #name1,#email1,#password1,#repassword1,#dob1
+            {
+                color:greenyellow;
+            }
+            #main{
+               
+               
+                height:500px;
+                background-color: crimson;
+                padding-left: 10px;
+                border: 10px solid white;
+
+            }
+            .firstcol{
+                
+                
+                height:500px;
+                background-color: crimson;
+                padding-left: 10px;
+                border: 10px solid white;
+
+            }
+            #secondcol{
+               
+                width: 300px;
+                height:500px;
+                background-color: crimson;
+                padding-left: 10px;
+                border: 10px solid white;
+
+            }
+            .firstcol h3{
+                color: white;
+            }
+
+        </style>
+    </head>
+<body>
+    <div class="container">
+           
+        <div class="row">
+            <div class="col-sm-12 col-md-2 col-lg-4">
+                    <div class="firstcol">
+                        <h3>GLOBAL NATURE FILM FESTIVAL-2018 <br> <br>
+                        </h3>
+                                <p>
+                                    Entries can be submitted via mail/courier or in person at festival office along with film&#39;s
+                                    Dvd (2 copies). Payment can be made through Bank Transfer, Cheque/DD (Please enclose proof of
+                                    the payment along with the rest of submission). Cost of Mail/Courier will be paid by the sender.
+                                    The DVDs must be properly labeled with the Film Title, Submitter’s name and contact, 
+                                    Duration, format and subtitling if any and without any watermarks.
+                                </p>
+                    </div>
+                
+            </div>
+            <div class=" col-lg-1"></div>
+
+            <div class="col-sm-12 col-md-2 col-lg-3">
+                <div id="main"><br><br><br>
+                    <label for="">Name</label><br>
+                    <input type="text" name="" id="name"  placeholder="enter name" ><br>
+                        <div id="name1">
+                        <p></p>
+                        </div>
+                    <label for="">Email</label><br>
+                    <input type="text" name="email" id="email" placeholder="email" onblur="checkemail()"><br>
+                        <div id="email1">
+                        <p></p>
+                        </div>
+                    <label for="">Password</label><br>
+                    <input type="password" name="password" id="password"placeholder="password" onblur="checkpassword()"><br>
+                        <div id="password1">
+                                <p></p>
+                        </div>
+                    <label for="">Repeatpassword</label><br>
+                        <input type="password" name="re-password" id="repassword"placeholder="re-password" onblur="checkrepassword()"><br>
+                        <div id="repassword1">
+                            <p></p>
+                        </div>
+                        
+            
+                </div>
+            </div>
+            <div class=" col-lg-1"></div>
+
+            <div class="col-sm-12 col-md-2 col-lg-3">
+                <div id="secondcol">
+                    <br><br><br>
+                    <label for="">Date of Birth</label><br>
+                    <input type="date" name="dob" id="dob"onblur="verify()"><br>
+                        <div id="dob1">
+                           <p> </p>
+                        </div><br><br>
+                    <label for="">Short Bio</label><br>
+                    <textarea name="bio" id="bio" cols="30" rows="10" onkeyup="checkchar()"></textarea>
+                        <div id="bio1">
+                        <p>character:<span id="num">140</span></p>
+                        <p id="num1" style="color: yellow;"></p>
+                        </div>
+                    <button type="button"  class="btn btn-success"id="b1" onclick="checkfornull()">Register</button>
+                <!-- <button id="b1" onclick="checkfornull()">Register</button> -->
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+
+<script>
+
+    
+    function checkfornull()
+   {
+        var uname1=document.getElementById("name");
+        var msg1=document.getElementById("name1");
+
+        var emai=document.getElementById("email");
+        var msg2=document.getElementById("email1");
+
+        var passwor=document.getElementById("password");
+        var msg3=document.getElementById("password1");
+        
+        var repasswor=document.getElementById("repassword");
+        var msg4=document.getElementById("repassword1");
+
+        var d=document.getElementById("dob");
+        var msg5=document.getElementById("dob1");
+       console.log(uname1.value);
+            if(uname1.value.length<1)
+                {
+                msg1.textContent="pleasefillform";
+                
+                }
+            else 
+                {
+                msg1.textContent="";
+                }
+            
+            if(emai.value.length<1)
+                {
+                msg2.textContent="pleasefillform";
+                
+                }
+            else 
+                {
+                msg2.textContent="";
+                }
+
+            if(passwor.value.length<1)
+                {
+                    msg3.textContent="pleasefillform";
+                }
+            else 
+                {
+                msg3.textContent="";
+                }
+
+            if(repasswor.value.length<1)
+                {
+                msg4.textContent="pleasefillform";
+                
+                }
+            else 
+                {
+                msg4.textContent="";
+                }
+
+            if(d.value.length<1)
+                {
+                msg5.textContent="pleasefillform";
+                
+                }
+            else 
+                {
+                msg5.textContent="";
+                }
+
+    }
+    
+
+       function checkemail()
+       {   
+           
+            var uname1=document.getElementById("email");
+            var msg1=document.getElementById("email1");
+            var c=/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
+         
+            if(!(c.test(uname1.value)))
+            {
+                console.log("check");
+                msg1.textContent="Invalid-email";
+            }
+            else 
+                {
+                msg1.textContent="";
+                }
+
+       }
+         function checkpassword()
+         {
+            var uname1=document.getElementById("password");
+            var msg1=document.getElementById("password1");
+            var c=/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,20}$/;
+
+            if(uname1.value.length>8)
+               
+            {
+                  
+                if(!(c.test(uname1.value)))
+                {
+                    console.log("check");
+                    msg1.textContent="passwordcontail -uppercase ,number,lowercase,symbol";
+                }
+                else 
+                {
+                    msg1.textContent="";
+                    
+                }
+          }
+          else 
+                {
+                    msg1.textContent="Atleast 8 char";
+                }
+
+         }
+        function checkrepassword()
+         {
+            var uname1=document.getElementById("repassword");
+            var msg1=document.getElementById("repassword1");
+            var passwor=document.getElementById("password");
+            //
+            console.log(uname1.value);
+            if(passwor.value!==uname1.value)
+            {
+               
+                msg1.textContent="passwordnotmatch";
+               
+            }
+            else 
+            
+            {
+                    msg1.textContent="mathching";
+            }
+
+
+         }
+
+
+        function checkdate()
+        {
+
+            var uname1=document.getElementById("dob");
+            var msg1=document.getElementById("dob1");
+            var d = new Date();
+            var n = d.getDay();
+            console.log(n);
+        
+        }
+        function checkchar()
+ {
+    var x=document.getElementById("bio").value.length;
+    if(140-x>=0)
+    {
+       document.getElementById("num").innerHTML=140-x;
+      
+    }
+    else
+    {
+        document.getElementById("num1").innerHTML="character exceed";
+    }
+    
+}
+    
+           
+        // $(document).ready(function(){
+        // $("textarea").keypress(function(){
+
+        //     i--;
+        //     if(i!=0){
+        //         $("span").text(i);
+        //     }
+              
+        //     else
+        //     {
+        //         var msg1=document.getElementById("bio1"); 
+        //         msg1.textContent="Characterexceed";
+        //     }     
+            
+        // });
+        // });
+
+        function verify() {
+                    var a=new Date();
+                   
+                    var m=a.getFullYear();
+                    var b=document.getElementById('dob').value;
+                    var d=new Date(b);
+                   
+                    var n= d.getFullYear();
+                    var y=m-n;
+                    
+                    
+                if(y>=18)
+                {
+                    document.getElementById('dob1').innerHTML ="";
+                }
+                else
+                { 
+                    var msg=('<input type="checkbox">click the box with parent permission');
+                    document.getElementById('dob1').innerHTML =msg;
+                }
+     }
+</script>
+
+</html>

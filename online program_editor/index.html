@@ -1,0 +1,53 @@
+<html>
+    <head>
+        
+            <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+
+       <style>
+
+            #txt{
+                width:430px;
+                height:400px;
+                
+            }
+            #t2{
+                width:430px;
+                height:400px;
+            }
+            #t3{
+                width:430px;
+                height:400px;
+            }
+            #frame{
+                width:1300px;
+                height:400px;
+            }
+            
+        </style>
+        
+    </head>
+<body>
+
+        <textarea name="" id="txt" cols="30" rows="10" placeholder="HTML"></textarea>
+        <textarea name="" id="t2" cols="30" rows="10"  placeholder="CSS"></textarea>
+        <textarea id="t3"   placeholder="JS"></textarea>
+        <iframe id="frame">OUTPUT:</iframe>
+        <script>
+            function compile()
+{
+ var h=document.getElementById('txt');
+ var c=document.getElementById('t2');
+ var j=document.getElementById('t3');
+ var code=document.getElementById('frame').contentWindow.document;
+  document.body.onkeyup = function()
+  {
+    code.open();
+       code.writeln(h.value+"<style>"+c.value+"</style>");
+       code.close();
+ };
+};
+compile();
+       
+        </script>
+</body>
+</html>

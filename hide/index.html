@@ -1,0 +1,107 @@
+<html>
+    <head>
+            <style>
+                    @import url('https://fonts.googleapis.com/css?family=Open+Sans%7CQuicksand&display=swap');
+                  
+                    li{
+                        background-color: chartreuse;
+                        width:260px;
+                        height:60px;
+                        border-top:1px,solid crimson;
+                        list-style-type: none;
+                        border-top:1px,solid crimson;
+                        border-bottom: 3px solid white;
+                        color: cornsilk;
+                        font-size: 20px;
+                        text-align: center;
+                        padding-top: 22px;
+                       
+}
+                        
+                    
+                    #number{
+                       width:100px;
+                       height: 20px;
+                       background-color: black;
+                       color:white;
+                       
+
+                   }
+                   /* ul{
+                        position: absolute;
+                        left: 400px;
+                        top: 200px;
+                   } */ */
+
+                </style>
+       
+    </head>
+    <body>
+       
+            <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+           
+        <script>
+            $(document).ready(function(){
+            // $("button").click(function () {
+                $("#div1").fadeIn(3000);
+                $("#div2").fadeIn(6000);
+                $("#div3").fadeIn(9000);
+                $("#div4").fadeIn(12000);
+
+            });
+        // });
+
+
+                $(function(){
+                $("#adding").hide();
+                $("#content").hide();
+                });
+            $(document).ready(function(){
+            $("#show").click(function(){
+                $("#adding").show();
+                $(content).show();
+                $("#show").hide();
+
+            });
+            });
+         var count=4;
+        $(document).ready(function(){
+        $("#adding").click(function(){
+             var inputbox=$('#content').val();
+             $("ul").append('<li>' + inputbox + '</li>');
+            $('#content').val("");
+            $('#content').focus();
+           
+            count++;
+            document.getElementById('number').innerHTML="Top "+count;
+            });
+        });
+        </script>
+        <center>
+                <p id ="number"> Top 4</p>
+      <ul>
+            <li id="div1"style="width:260px;height:60px;display:none;background-color:#d7666b">Honey</li>
+            <li id="div2" style="width:260px;height:60px;display:none;background-color :#914141">Fresh</li>
+            <li id="div3" style="width:260px;height:60px;display:none;background-color:#6cc0ac;">Pine nuts</li>
+            <li id="div4" style="width:260px;height:60px;display:none;background-color:#ec8b68;">Balsamic vinegar</li>
+           
+
+
+
+      </ul>
+         
+        <button id="show">addclub</button>
+        <button id ="adding">add</button>
+            <input type="text" id="content"><br><br>
+                <div id="div1"></div>
+                
+         
+
+    </center>
+
+
+
+    
+    </body>
+   
+</html>

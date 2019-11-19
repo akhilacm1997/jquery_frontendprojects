@@ -1,0 +1,105 @@
+<html>
+ <head>
+   <meta charset="UTF-8">
+   <title>Smart watch</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <!-- icon selesting link -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> -->
+
+        <style>
+            #txt
+            {
+                position:absolute;
+                left:800px;
+                top:170px;
+                color:white;
+            }
+            #commentsntbutton{
+                position: absolute;
+                top: 650px;
+                left: 662px;
+                color:blue;
+            }
+            #musicbutton{
+                position: absolute;
+                top: 650px;
+                left: 745px;
+                color: blue;
+            }
+            #clockbutton{
+                position: absolute;
+                top: 650px;
+                left: 823px;
+                color:blue;
+            }
+            #commentsdisplay{
+                position:absolute;
+                left:600px;
+                top:170px;
+                color: white;
+            }
+            #musicdisplay{
+                position:absolute;
+                left:600px;
+                top:170px;
+                color: white;
+            }
+            #clockdisplay{
+                position:absolute;
+                left:600px;
+                top:170px;
+                color: white;
+            }
+            #display{
+                width: 300px;
+                height:300px;
+                background-color: white;
+                position:absolute;
+                left:600px;
+                top:250px;
+                
+                
+
+            }
+
+
+        </style>
+
+
+ </head>
+ <body onload="startTime()">
+        
+       <nav>
+            
+            <a href="watch1.html" id="commentsntbutton"class="current" ><i class="fa fa-comments-o" aria-hidden="true" id="comments"></i></a>
+                <div id="commentsdisplay"><p></p></div>
+           <a href="watch2.html" id="musicbutton" ><i class="fa fa-music" aria-hidden="true" id="music"></i></a>
+                <div id="musicdisplay"><p></p></div>
+           <a href="watch3.html" id="clockbutton" ><i class="fa fa-clock-o" aria-hidden="true"id="clock" ></i></a>
+                <div id="clockdisplay"><p></p></div>
+        </nav>
+        <img src="siverwatch1.jpg" width="700px";height:500px; style="margin-left: 400px;">
+        <div id="txt" ></div>
+        <div id="content">
+                <div id="container">
+                       
+                        <div id="display">Stop watch1</div>
+                       
+                    </div>
+        </div>
+        
+        <!-- <script>
+             function commentfn() 
+            {
+                document.getElementById("commentsdisplay").innerHTML="Notifications";
+                document.getElementById("clockdisplay").innerHTML="";
+                document.getElementById("musicdisplay").innerHTML="";
+                
+            }
+        
+        </script> -->
+        <script src="jquery-1.11.0.min.js"></script>
+        <script src="watch.js"></script>
+    </body>
+</html>

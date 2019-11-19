@@ -1,0 +1,89 @@
+<html>
+    
+<head>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <title>textmarking</title>
+            <style>
+
+                    li:hover
+                    {
+                    
+                        text-decoration: line-through;
+                    
+                    }
+                    #n{
+                        border: none;
+                        outline: none;
+                        width: 600px;
+                        height: 40;
+                    }
+                    #ul1{
+                        list-style-type: none;
+                    }
+                    li{
+                        font-size: 40px;
+                    }
+                   ::placeholder{
+                    color: darkgray;
+                    font-size: 30px;
+                 }
+
+            </style>
+
+    </head>
+    <body>
+                <center>
+                    <br><br><br>
+                    <input type="text" name="" id="n" placeholder="what needs to be done..?">
+
+                    <ul id="ul1">
+                        
+                        
+                    </ul>
+                </center>
+                    
+
+
+
+
+            <script>
+
+                    $(document).ready(function(){
+                        $("#n").keyup(function(e) {
+                                var code = e.which;
+                                if (code == 13) {
+                            // $("#b1").click(function(){
+                                var inputbox=$('#n').val();
+                                $("#ul1").append('<li id="bid">' + inputbox + '</li>');
+                                $('#n').val("");
+                                $('#n').focus();
+                                }
+                            
+                                });
+                            });
+
+
+
+//         $("#bid").hover(function(){
+//   $(this).wrap("<strike>");
+  
+//   } );
+                                $("#ul1").on("click","li",function () {
+                                    $(this).remove();
+                                });
+
+
+
+             </script>
+
+
+    </body>
+
+
+
+
+
+
+
+
+</html>

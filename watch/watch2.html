@@ -1,0 +1,167 @@
+<html>
+ <head>
+   <meta charset="UTF-8">
+   <title>Smart watch</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <!-- icon selesting link -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <!-- <script src="jquery-1.11.0.min.js"></script> -->
+    <script src="watch.js"></script>
+        <style>
+            #txt
+            {
+                position:absolute;
+                left:800px;
+                top:170px;
+                color:white;
+            }
+            #commentsntbutton{
+                position: absolute;
+                top: 650px;
+                left: 662px;
+                color:blue;
+            }
+            #musicbutton{
+                position: absolute;
+                top: 650px;
+                left: 745px;
+                color: blue;
+            }
+            #clockbutton{
+                position: absolute;
+                top: 650px;
+                left: 823px;
+                color:blue;
+            }
+            #commentsdisplay{
+                position:absolute;
+                left:600px;
+                top:170px;
+                color: white;
+            }
+            #musicdisplay{
+                position:absolute;
+                left:600px;
+                top:170px;
+                color: white;
+            }
+            #clockdisplay{
+                position:absolute;
+                left:600px;
+                top:170px;
+                color: white;
+            }
+            #display{
+                width: 300px;
+                height:300px;
+                background-color: white;
+                position:absolute;
+                left:600px;
+                top:250px;
+                
+                
+
+            }
+            #y{
+                
+                position: absolute;
+                    top: 376px;
+                    left: 664px;
+
+                
+            }
+            #play{
+                position: absolute;
+                    top: 376px;
+                    left: 664px;
+
+            }
+
+
+
+        </style>
+
+
+ </head>
+ <body onload="startTime()">
+       
+        <nav>
+            
+              <a href="watch1.html" id="commentsntbutton"class="current" ><i class="fa fa-comments-o" aria-hidden="true" id="comments"></i></a>
+                    <div id="commentsdisplay"><p></p></div>
+               <a href="watch2.html" id="musicbutton" ><i class="fa fa-music" aria-hidden="true" id="music"></i></a>
+                    <div id="musicdisplay"><p></p></div>
+               <a href="watch3.html" id="clockbutton" ><i class="fa fa-clock-o" aria-hidden="true"id="clock" ></i></a>
+                    <div id="clockdisplay"><p></p></div>
+            </nav>
+            <img src="siverwatch1.jpg" width="700px";height:500px; style="margin-left: 400px;">
+                        <div id="txt" ></div>
+        <div id="content">
+                <div id="container">
+                        <p>ggfgfgf</p>
+                        
+                        <div id="display">musicplay</div>
+                        <audio id="play" controls> <source src="Katturumbinu Kalyanam - Male(MalluLuv.Com).mp3"></audio>
+                            <p style="color:red;">SONGS</p>
+                            <p></p>
+    <!-- <div id="aud" style="left: 10px;margin-left: -46px;"> -->
+            <audio id="myAudio">
+                    <source src="Katturumbinu Kalyanam - Male(MalluLuv.Com).mp3" type="audio/mpeg">
+                    
+                  </audio>
+                  <div id="full" style="width: 90%;height: 20%;margin-top: 134px;">
+                  <div id="previous"><i class="fa fa-step-backward" aria-hidden="true" style="margin-top: 4px;"></i></div>
+                  <div id="main" style="margin-top: -5%; margin-left: 93px;"> 
+                
+                <div id="pauses" style="visibility: hidden;"><i class="fa fa-pause"  aria-hidden="true" onclick="pauseAudio()" ></i></div>
+                <div id="plays"> <i class="fa fa-play" class="current" aria-hidden="true" onclick="playAudio()"></i></div>
+                
+               </div>
+               <div id="next"><i class="fa fa-step-forward" aria-hidden="true"style="margin-top: -1.5%;right:37%;position:absolute;"></i></div>
+        </div>
+        <script>
+            function playAudio() { 
+               var x = document.getElementById("myAudio"); 
+             x.play();
+              document.getElementById("plays").style.visibility="hidden";
+              document.getElementById("pauses").style.visibility="visible";
+           } 
+           
+           function pauseAudio() { 
+               var x = document.getElementById("myAudio"); 
+             x.pause(); 
+              document.getElementById("pauses").style.visibility="hidden";
+              document.getElementById("plays").style.visibility="visible";
+           
+           } 
+           </script>
+        <!-- <audio id="myAudio">
+                                <source src="pookal_madaraspatinm.mp3" type="audio/ogg">
+                                <source src="pookal_madaraspatinm.mp3" type="audio/mpeg">
+                               
+                              </audio>
+                              
+
+                              
+                              <button onclick="playAudio()" type="button" id="playbutton"><i class="fa fa-play" aria-hidden="true"></i></button>
+                              <button onclick="pauseAudio()" type="button" id="pausebutton"><i class="fa fa-pause" aria-hidden="true"></i></button> 
+                              
+                    </div>
+        </div>
+        <script>
+                var x = document.getElementById("myAudio"); 
+                
+                function playAudio() { 
+                    console.log("play");
+                  x.play(); 
+                } 
+                
+                function pauseAudio() { 
+                  x.pause(); 
+                } 
+        </script> -->
+                
+      
+    </body>
+</html>

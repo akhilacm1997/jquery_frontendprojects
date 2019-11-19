@@ -1,0 +1,34 @@
+1) What is JAVA?
+Java is a high-level programming language and is platform independent.
+Java is a collection of objects. It was developed by Sun Microsystems. There are a lot of
+applications, websites and Games that are developed using Java.
+
+2) What are the features in JAVA?
+Features of Java:
+Oops concepts
+	Object-oriented
+	Inheritance
+	Encapsulation
+	Polymorphism
+	Abstraction
+Platform independent: A single program works on different platforms without any
+modification.
+High Performance: JIT (Just In Time compiler) enables high performance in Java. JIT
+converts the bytecode into machine language and then JVM starts the execution.
+Multi-threaded: A flow of execution is known as a Thread. JVM creates a thread which
+is called main thread. The user can create multiple threads by extending the thread class
+or by implementing Runnable interface.
+
+3) How does Java enable high performance?
+Java uses Just-In Time compiler to enable high performance. JIT is used to convert the
+instructions into bytecodes. It makes the compilation fast and time-efficient.
+
+4) What are the Java IDE’s?
+Eclipse, IntelliJ and NetBeans are the IDE's of JAVA.
+
+5) What is a Class?
+Class is the blueprint or template of an object.
+Every Java program consist of Classes, Classes consist of methods and methods
+consist of commands.
+A class is an entity that determines how an object will behave and what the object
+will contain.
